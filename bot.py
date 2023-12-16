@@ -15,16 +15,21 @@ async def on_message(message):
     if message.content.startswith("https://www.instagram.com/reel/"):
         link = message.content
         new_link = link.replace("instagram", "ddinstagram")
-        await message.channel.send(f"{message.author.display_name} posted: {new_link}")
-        await message.delete()
     elif message.content.startswith("https://www.tiktok.com/"):
         link = message.content
         new_link = link.replace("tiktok", "vxtiktok")
-        await message.channel.send(f"{message.author.display_name} posted: {new_link}")
-        await message.delete()
     elif message.content.startswith("https://www.facebook.com/reel/"):
         link = message.content
         new_link = "https://www.ddinstagram.com/reel/" + link.split("/reel/")[1].split("?")[0]
-        await message.channel.send(f"{message.author.display_name} posted: {new_link}")
-        await message.delete()
+    elif message.content.startswith("https://twitter.com"):
+        link = message.content
+        new_link = link.replace("twitter", "fxtwitter")
+    elif message.content.startswith("https://x.com"):
+        link = message.content
+        new_link = link.replace("x", "fixupx")
+    else:
+        return
+    await message.channel.send(f"{message.author.display_name} posted: {new_link}")
+    await message.delete()
+
 client.run(DISCORD_BOT_TOKEN)
