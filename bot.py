@@ -27,10 +27,10 @@ async def on_message(message):
     elif message.content.startswith("https://x.com"):
         link = message.content
         new_link = link.replace("x", "fixupx")
-    elif message.content.startswith("https://reddit.com") || message.content.startswith("https://www.reddit.com")
+    elif message.content.startswith("https://reddit.com") || message.content.startswith("https://www.reddit.com"):
         link = message.content
         new_link = link.replace("reddit", "rxddit")
-    elif message.content.startswith("https://old.reddit.com")
+    elif message.content.startswith("https://old.reddit.com"):
           link = message.content
         new_link = link.replace("old.reddit", "rxddit")
     else:
