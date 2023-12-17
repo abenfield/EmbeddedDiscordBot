@@ -31,7 +31,7 @@ async def on_message(message):
         link = message.content
         new_link = link.replace("reddit", "rxddit")
     elif message.content.startswith("https://old.reddit.com"):
-          link = message.content
+        link = message.content
         new_link = link.replace("old.reddit", "rxddit")
     else:
         return
